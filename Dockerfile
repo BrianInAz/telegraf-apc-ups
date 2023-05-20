@@ -1,6 +1,6 @@
 FROM telegraf:1.26
 
-# Adding non-free repos in order to obtain snmp-mibs-downloader
+# Adding non-free repos in order to obtain snmp-mibs-downloader which ships the IETF RFCs containing MIB files.
 RUN echo 'deb http://deb.debian.org/debian bullseye non-free' > /etc/apt/sources.list.d/bullseye-nonfree.list && \
     echo 'deb http://deb.debian.org/debian bullseye-updates non-free' > /etc/apt/sources.list.d/bullseye-nonfree-updates.list && \
     echo 'deb http://deb.debian.org/debian-security/ bullseye-security non-free' > /etc/apt/sources.list.d/bullseye-nonfree-security.list
